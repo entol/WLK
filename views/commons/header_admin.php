@@ -19,12 +19,12 @@
   <script type="text/javascript" src="<?php echo base_url();?>assets/plugins/jQuery/jQuery-2.1.3.min.js"></script>
 
   </head>
-  
+
    <body class="<?php echo layout_option;?><?php echo " ";?><?php echo skins;?>">
     <div class="wrapper">
       <header class="main-header">
         <!-- Logo -->
-        <a href="<?php echo base_url();?>" class="logo hidden-xs"><span class="pull-left"><h4><b>WAYLIMO.PT</b></h4></span></a> 
+        <a href="<?php echo base_url();?>" class="logo hidden-xs"><span class="pull-left"><h4><b>WAYLIMO.PT</b></h4></span></a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
@@ -73,7 +73,7 @@
             </ul>
           </div>
       </header>
-      
+
 
       <!-- Left side column. contains the logo and sidebar -->
       <aside class="main-sidebar">
@@ -97,17 +97,15 @@
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
               </a>
             </li>
-           
+
                 <!--li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li-->
-                <li class="<?php echo ($activeTab == "master" || $activeTab == "iso"  || $activeTab == "users" || $activeTab == "scp" ||  $activeTab == "material_pick" || $activeTab == "vendor" || $activeTab == "project"|| $activeTab == "material") ? "active" : ""; ?>">
+                <li class="<?php echo ($activeTab == "master" || $activeTab == "iso"  || $activeTab == "users" || $activeTab == "scp" || $activeTab == "isotrans" ||  $activeTab == "material_pick" || $activeTab == "vendor" || $activeTab == "project"|| $activeTab == "material") ? "active" : ""; ?>">
                   <a href="#"><i class="fa fa-square text-<?php echo color;?> "></i> Document/Revision Control<i class="fa fa-angle-left pull-right"></i></a>
                   <ul class="treeview-menu" ">
-                    <li class="<?php echo ($activeTab == "users") ? "active" : ""; ?>"><a href="<?php echo base_url();?>users"><i class="fa fa-circle <?php echo ($activeTab == "users") ? "text-" : ""; ?><?php echo color;?>"></i> Users Management</a></li>
-                     <li class="<?php echo ($activeTab == "project") ? "active" : ""; ?>"><a href="<?php echo base_url();?>project"><i class="fa fa-circle <?php echo ($activeTab == "project") ? "text-" : ""; ?><?php echo color;?>"></i> Project</a></li>
-                    <li class="<?php echo ($activeTab == "vendor") ? "active" : ""; ?>"><a href="<?php echo base_url();?>vendor"><i class="fa fa-circle <?php echo ($activeTab == "vendor") ? "text-" : ""; ?><?php echo color;?>"></i> Vendor</a></li>
                     <li class="<?php echo ($activeTab == "iso") ? "active" : ""; ?>"><a href="<?php echo base_url();?>iso"><i class="fa fa-circle <?php echo ($activeTab == "iso") ? "text-" : ""; ?><?php echo color;?>"></i> Isometric List</a></li>
-                     <li class="<?php echo ($activeTab == "iso") ? "active" : ""; ?>"><a href="<?php echo base_url();?>iso"><i class="fa fa-circle <?php echo ($activeTab == "iso") ? "text-" : ""; ?><?php echo color;?>"></i> Isometric Transmital</a></li>
-                   
+                     <li class="<?php echo ($activeTab == "isotrans") ? "active" : ""; ?>"><a href="<?php echo base_url();?>isotrans"><i class="fa fa-circle <?php echo ($activeTab == "isotrans") ? "text-" : ""; ?><?php echo color;?>"></i> Isometric Transmital</a></li>
+                     <li class="<?php echo ($activeTab == "swn") ? "active" : ""; ?>"><a href="<?php echo base_url();?>swn"><i class="fa fa-circle <?php echo ($activeTab == "swn") ? "text-" : ""; ?><?php echo color;?>"></i> Stop Work Notice</a></li>
+
                     <li>
                    </ul>
                 </li>
@@ -117,8 +115,8 @@
                     <li class="<?php echo ($activeTab == "kpdc") ? "active" : ""; ?>"><a href="<?php echo base_url();?>kpdc"><i class="fa fa-circle <?php echo ($activeTab == "kpdc") ? "text-orange" : ""; ?>"></i> History Log</a></li>
                     <li class="<?php echo ($activeTab == "office") ? "active" : ""; ?>"><a href="<?php echo base_url();?>office"><i class="fa fa-circle <?php echo ($activeTab == "office") ? "text-orange" : ""; ?>"></i> Backup Db</a></li>
                      <li class="<?php echo ($activeTab == "create_report") ? "active" : ""; ?>"><a href="<?php echo base_url();?>create_report"><i class="fa fa-circle <?php echo ($activeTab == "create_report") ? "text-orange" : ""; ?>"></i> Custom Report</a></li>
-                   
-                   
+
+
                     <li>
                    </ul>
                 </li>
@@ -128,7 +126,7 @@
               </a>
             </li>
 			<li class="header">MEMO</li>
-            
+
             </ul>
         </section>
         <!-- /.sidebar -->
@@ -136,8 +134,8 @@
 
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
-      
-<!-- end adminpage --> 
+
+<!-- end adminpage -->
 
 
-<?php } ?>  
+<?php } ?>

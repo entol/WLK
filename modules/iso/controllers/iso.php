@@ -69,6 +69,7 @@ class Iso extends MX_Controller
     				
         $xcrud->unset_title();
         $xcrud->relation('project_code','get_project_concat','id','project');
+        $xcrud->relation('main_material','main_material','id','name');
         //$xcrud->subselect('Project','SELECT project FROM get_project_concat WHERE id = {id}');
 		$xcrud->hide_button('save_return');
 		$xcrud->set_lang('save_edit','Save');
@@ -194,6 +195,30 @@ class Iso extends MX_Controller
 		$spl_material->set_attr('iso_spl_id',array('type'=>'hidden')); 
 		$data['iso'] = $xcrud->render();//'create','edit',12
 		//--------------------------------------------------------------------
+		
+		$lineclass = xcrud_get_instance('teest');
+        $lineclass->table('line_class');
+		$lineclass->fields('id,name,description');
+		$lineclass->columns('name,description');
+		$lineclass->default_tab();
+		$lineclass->set_attr('user_id',array('readonly'=>'true'));
+		$lineclass->set_attr('id',array('type'=>'hidden'));
+		$lineclass->label('id','');
+		$lineclass->benchmark();
+		$lineclass->unset_title();
+        $data['lc'] = $lineclass->render();
+        
+        $main_material = xcrud_get_instance();
+        $main_material->table('main_material');
+		$main_material->fields('id,name,description');
+		$main_material->columns('name,description');
+		$main_material->default_tab();
+		$main_material->set_attr('user_id',array('readonly'=>'true'));
+		$main_material->set_attr('id',array('type'=>'hidden'));
+		$main_material->label('id','');
+		$main_material->benchmark();
+		$main_material->unset_title();
+        $data['mm'] = $main_material->render();
 
 		$meta = $this->meta;			
 		$this->load->view('commons/header_admin',$meta);			
